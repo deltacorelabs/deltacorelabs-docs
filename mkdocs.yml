@@ -154,4 +154,6 @@ nav:
   - Home: index.md
   - Notes: notes/index.md
   - Guides: guides/index.md
-  - Visually: Visually/index.md
+  - Visually:
+    - Visually/index.md
+    - Visually Docs: Visually/developsmart-workload-studio.md
