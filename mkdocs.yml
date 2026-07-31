@@ -1,0 +1,157 @@
+# Project Information
+site_name: Delta Core Labs Docs
+site_url: https://deltacorelabs.com/docs
+site_author: Delta Core Labs
+site_description: >-
+  Delta Core Labs documentation and knowledge base.
+
+# Copyright
+copyright: Copyright &copy; 2024 - 2026 Delta Core Labs
+
+# Configuration
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+
+  # Logo and Favicon
+  logo: assets/images/logo.svg
+  favicon: assets/images/favicon.svg
+
+  # Color Palette with Toggle
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  # Font Configuration
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+  # Features
+  features:
+    # Navigation
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+
+    # Table of Contents
+    - toc.follow
+
+    # Search
+    - search.suggest
+    - search.highlight
+    - search.share
+
+    # Header
+    - header.autohide
+
+    # Content
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+
+  # Icons
+  icon:
+    repo: fontawesome/brands/github
+
+# Plugins
+plugins:
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+  - tags:
+      tags_file: tags.md
+
+# Extensions
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      permalink_title: Anchor link to this section
+      toc_depth: 3
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      use_pygments: true
+      auto_title: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Extra Configuration
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/deltacorelabs
+      name: Delta Core Labs on GitHub
+  generator: false
+
+# Additional CSS
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/animations.css
+
+# Additional JavaScript
+extra_javascript:
+  - javascripts/extra.js
+
+# Navigation Structure
+nav:
+  - Home: index.md
+  - Notes: notes/index.md
+  - Guides: guides/index.md
+  - Visually: Visually/index.md
